@@ -1,0 +1,56 @@
+.p1 {
+  margin-top: 100px;
+}
+.col2 {
+  margin-top: 100px;
+}
+.col3 {
+  margin-top: 100px;
+}
+.col2 div img {
+  margin-left: -70px;
+}
+
+.div-1 {
+  background-color: #090909;
+  opacity: 0.5;
+  border-radius: 6px;
+  padding: 3px;
+  width: 300px;
+}
+.div-1 span {
+  background: linear-gradient(95.79deg, #2317fa -33.63%, #d529e4 97.49%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  text-shadow: 6px 16px 31px rgba(59, 88, 239, 0.15);
+}
+.heading {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62.6667px;
+  line-height: 100px;
+  color: #ffffff;
+  text-align: start;
+}
+.details {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 33px;
+  color: #dadada;
+  text-align: start;
+}
+.get-button {
+  width: 253px;
+  height: 77px;
+  background: linear-gradient(95.48deg, #2317fa -1.25%, #d529e4 97.48%);
+  box-shadow: 6px 16px 31px 8px rgba(59, 88, 239, 0.15);
+  border-radius: 0px;
+  margin-left: -100px;
+  margin-top: 30px;
+}
