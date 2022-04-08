@@ -33,3 +33,32 @@
 
   color: #dadada;
 }
+.search-field {
+  background: #2d2853;
+  opacity: 0.6;
+  backdrop-filter: blur(45px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* .pagination {
+  margin: 30px;
+}
+.pagination button {
+  padding: 0 10px;
+  margin-right: 20px;
+}
+.pagination .selected {
+  background-color: blue;
+  color: white;
+} */
+
+.page {
+  /* background-color: rgb(11, 11, 22) !important; */
+  /* opacity: 0.6; */
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 50%;
+}
