@@ -1,0 +1,28 @@
+.footer h1 {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+  text-align: center;
+
+  color: #ffffff;
+  margin-top: 50px;
+  padding-top: 60px;
+}
+.input-box {
+  width: 640px;
+  height: 57px;
+  margin: auto;
+  background-color: #14132efa !important;
+  border: 2px solid #454466;
+  box-sizing: border-box;
+}
+.search-button {
+  width: 159px;
+  height: 57px;
+  background-color: #18163b;
+  margin-top: -8px;
+  margin-left: -10px;
+  border: 1px solid #d529e4;
+}

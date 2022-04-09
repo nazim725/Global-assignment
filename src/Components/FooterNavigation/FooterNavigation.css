@@ -1,0 +1,14 @@
+.icon {
+  color: #5b5b5b;
+  margin-right: 40px;
+}
+.copyright {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height, or 150% */
+
+  color: #6e7c9d;
+}

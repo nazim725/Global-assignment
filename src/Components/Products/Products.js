@@ -15,16 +15,14 @@ const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  //   const [displayProducts, setDisplayProducts] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [page, setPage] = useState(0);
+  const [displayProducts, setDisplayProducts] = useState([]);
   const [upcoming, setUpcoming] = useState("");
   const [launchYear, setLaunchYear] = useState("");
 
   const [productPerPage] = useState(10);
   const [totalProduct, setTotalProduct] = useState(0);
   const size = 10;
-  console.log("page", pageCount);
+  console.log(displayProducts);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -34,6 +32,7 @@ const Products = () => {
       );
       setProducts(response.data);
       setTotalProduct(response.data.length);
+      setDisplayProducts(response.data);
       setLoading(false);
     };
     // fetch(`https://api.spacexdata.com/v3/launches?page=${page}&&size=${size}`)
@@ -48,11 +47,14 @@ const Products = () => {
     //     setPageCount(pageNumber);
     //   });
     loadProducts();
-  }, [page]);
+  }, []);
 
   const indexOfLastPage = currentPage + productPerPage;
   const indexOfFirstPage = indexOfLastPage - productPerPage;
-  const currentProducts = products.slice(indexOfFirstPage, indexOfLastPage);
+  const currentProducts = displayProducts.slice(
+    indexOfFirstPage,
+    indexOfLastPage
+  );
   const paginate = (pagNum) => setCurrentPage(pagNum);
   const prevPage = () => setCurrentPage(currentPage - 1);
   const nextPage = () => setCurrentPage(currentPage + 1);
@@ -75,9 +77,11 @@ const Products = () => {
   const handleSearch = (event) => {
     const searchText = event.target.value;
     const matchProduct = products.filter((product) =>
-      product.rocket_name.toLowerCase().includes(searchText.toLowerCase())
+      product.rocket.rocket_name
+        .toLowerCase()
+        .includes(searchText.toLowerCase())
     );
-    // setDisplayProducts(matchProduct);
+    setDisplayProducts(matchProduct);
   };
   return (
     <Container>
